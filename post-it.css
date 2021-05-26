@@ -1,0 +1,96 @@
+.checkbox{
+  position: fixed;
+  background-color: red;
+  padding: 0 10px 0 10px;
+}
+
+#postitState:checked ~ * .post-it{
+  display: inline-block;
+}
+
+.post-it{
+  display: none;
+  position: absolute;
+  z-index: 99;
+}
+
+.post-it .wrapper{
+  padding: 20px;
+  margin: -15px 0 0 5px;
+  background-color: yellowgreen;
+  color: white;
+  position: relative;
+  z-index: 100;
+  overflow: auto;
+}
+
+.post-it [contenteditable]{
+  padding: 20px;
+}
+
+
+.post-it .close{
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  border-radius: 0 50% 50% 50%;
+  background-color: greenyellow;
+
+  cursor: pointer;
+}
+
+.important .wrapper{
+  background-color:darkorange;
+}
+.important .close{
+  background-color: orange;
+}
+
+.urgent .wrapper{
+  background-color: darkred;
+}
+
+.urgent .close{
+  background-color: red;
+}
+
+.left .wrapper{
+  margin:-15px 0 0 -160px ;
+}
+
+.left .close{
+  border-radius: 50% 0 50% 50%;
+}
+
+.l-important .wrapper{
+  background-color: darkorange;
+  margin: -15px 0 0 -160px;
+}
+
+.l-important .close{
+  background-color: orange;
+  border-radius: 50% 0 50% 50%;
+}
+
+.l-urgent .wrapper{
+  background-color: darkred;
+  margin: -15px 0 0 -160px;
+}
+
+.l-urgent .close{
+  background-color: red;
+  border-radius: 50% 0 50% 50%;
+}
+
+#postitState:checked ~ footer{
+  background-color: pink;
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .post-it [contenteditable]{
+    background-color: brown;
+  }
+  .post-it .close{
+    background-color: red;
+  }
+}
